@@ -1,0 +1,46 @@
+@keyframes line_slide{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 90%
+    }
+}
+
+@keyframes fadeIn{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+@keyframes slideToLeft{
+    0%{
+        left: 100%;
+    }
+    100%{
+        left: 0%;
+    }
+}
+
+@keyframes slideToRight{
+    0%{
+        right: 100%;
+    }
+    100%{
+        right: 0%;
+    }
+}
+
+@keyframes growImg{
+    0%{
+        width: 0%;
+        left: 0%;
+    }
+    100%{
+        width: 85%;
+        left: 15%;
+    }
+}

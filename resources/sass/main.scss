@@ -1,0 +1,93 @@
+.circle{
+    background-color:white;
+    border-radius: 50%;
+    transition: ease 1s;
+    width: 0px;
+    height: 0px;
+    animation: grow 0.7s;
+    animation-fill-mode: forwards;
+    z-index: 1;
+}
+
+.circle__wrapper{
+    height: 100vh;
+    position:absolute;
+    top: -30%;
+    left: -10%;
+}
+
+@keyframes grow{
+    0%{
+        width: 0px;
+        height: 0px;
+    }
+    100%{
+        width: calc(100vw/2);
+        height: 50vw;
+    }
+}
+
+.line__red
+{
+    background: $prime;
+    height: 5px;
+    width: 0%;
+    position: absolute;
+    animation: line_slide 0.7s;
+    animation-fill-mode: forwards;
+    animation-delay: 0.1s;
+}
+
+.title__container{
+    line-height: 40px;
+    position: inherit;
+    top: 25%;
+    padding-top: 10%;
+    padding-left: 5%;
+    padding-right: 5%;
+    font-family: MontserratLight;
+    animation: fadeIn 0.5s;
+    
+
+    .title__tagline{
+        margin-top: 20px;
+        line-height: 35px;
+        font-size: 30px;
+        font-family: MontserratLightItalic;
+        color: $black;
+        // border: solid 3px black;
+        position: absolute;
+        left: 100%;
+        animation: slideToLeft 0.5s;
+        animation-fill-mode: forwards;
+        height: 100%;
+        width: 100%;
+        padding-left: 5%;
+    }
+
+    .title__btn{
+        background: linear-gradient(160deg, #ff4f5a, #d0242f);
+        color: white;
+        border: 0;
+        box-shadow: 0 0 5px $black;
+        padding: 5px 20px 5px 20px;
+        outline: none;
+        font-size: 20px;
+        font-family: MontserratLight;
+        transition: ease 1s;
+        opacity: 0;
+        animation: fadeIn 1s;
+        animation-fill-mode: forwards;
+        animation-delay: 0.4s;
+    }
+
+    .title__btn:hover{
+        background: linear-gradient(160deg, #ef7a81, #e25059);
+    }
+
+    .title__controls
+    {
+        text-align: center;
+        margin-top: 10%;
+    }
+}
