@@ -7,7 +7,7 @@
       <li><router-link :to="{name:'Home', params:{id:'home'}}" class="nav-a">
         <font-awesome-icon icon="home" />&nbsp;Home</router-link>
       </li>
-      <li><router-link to="/fdtp-portal/public/home#system_list" class="nav-a">
+      <li><router-link to="/centralized-portal-login/public/home#system_list" class="nav-a">
         <font-awesome-icon icon="laptop" />&nbsp;Systems</router-link>
       </li>
       <template  v-if="isAdmin">

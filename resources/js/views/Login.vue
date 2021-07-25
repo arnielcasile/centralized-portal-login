@@ -211,7 +211,7 @@ export default {
 .login__box {
   width: 450px;
   height: 650px;
-  background-image: url(/fdtp-portal/public/images/redbkg.jpg);
+  background-image: url(/centralized-portal-login/public/images/redbkg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 50px;

@@ -12,43 +12,43 @@ use App\Models\RoleAccess;
 use App\Models\Systems;
 use App\Models\Token;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Redis;
+// use Illuminate\Support\Facades\Redis;
 use Illuminate\Support\Facades\DB;
 
 class UserRepository implements UserInterface
 {
     public function load_sections()
     {
-        $key = "hris_section";
-        if ($HrisSection = Redis::get($key)) {
-            return json_decode($HrisSection);
-        }
+        // $key = "hris_section";
+        // if ($HrisSection = Redis::get($key)) {
+        //     return json_decode($HrisSection);
+        // }
         $HrisSection = HrisSections::all('id', 'section', 'section_code');
-        Redis::set($key, $HrisSection);
+        // Redis::set($key, $HrisSection);
 
         return $HrisSection;
     }
 
     public function load_hris_masterlist()
     {
-        $key = "hrismasterlist";
-        if ($Hris = Redis::get($key)) {
-            return json_decode($Hris);
-        }
+        // $key = "hrismasterlist";
+        // if ($Hris = Redis::get($key)) {
+        //     return json_decode($Hris);
+        // }
         $Hris = HrisMasterlist::all();
-        Redis::set($key, $Hris);
+        // Redis::set($key, $Hris);
 
         return $Hris;
     }
 
     public function get_user_from_hris($emp_id)
     {
-        $key = "hrismasterlist_{$emp_id}";
-        if ($HrisMasterlist = Redis::get($key)) {
-            return json_decode($HrisMasterlist);
-        }
+        // $key = "hrismasterlist_{$emp_id}";
+        // if ($HrisMasterlist = Redis::get($key)) {
+        //     return json_decode($HrisMasterlist);
+        // }
         $HrisMasterlist = HrisMasterlist::where('emp_pms_id', $emp_id)->first();
-        Redis::set($key, $HrisMasterlist);
+        // Redis::set($key, $HrisMasterlist);
 
         return $HrisMasterlist;
     }

@@ -5,7 +5,7 @@ namespace App\Repositories;
 use App\Interfaces\SystemsInterface;
 use App\Models\Systems;
 use App\Models\HrisSections;
-use Illuminate\Support\Facades\Redis;
+// use Illuminate\Support\Facades\Redis;
 class SystemsRepository implements SystemsInterface
 {
     public function load()
@@ -62,12 +62,12 @@ class SystemsRepository implements SystemsInterface
 
     public function getSection()
     {
-        $key = "hris_section";
-        if ($HrisSection = Redis::get($key)) {
-            return json_decode($HrisSection);
-        }
+        // $key = "hris_section";
+        // if ($HrisSection = Redis::get($key)) {
+        //     return json_decode($HrisSection);
+        // }
         $HrisSection = HrisSections::all('id', 'section', 'section_code');
-        Redis::set($key, $HrisSection);
+        // Redis::set($key, $HrisSection);
 
         return $HrisSection;
     }

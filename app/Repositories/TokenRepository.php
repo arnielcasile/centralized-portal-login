@@ -7,7 +7,7 @@ use App\Models\Token;
 use Illuminate\Support\Str;
 use App\Models\Systems;
 use App\Models\HrisMasterlist;
-use Illuminate\Support\Facades\Redis;
+// use Illuminate\Support\Facades\Redis;
 
 class TokenRepository implements TokenInterface
 {
@@ -108,12 +108,12 @@ class TokenRepository implements TokenInterface
 
     public function get_user_from_hris($emp_id)
     {
-        $key = "hrismasterlist_{$emp_id}";
-        if ($HrisMasterlist = Redis::get($key)) {
-            return json_decode($HrisMasterlist);
-        }
+        // $key = "hrismasterlist_{$emp_id}";
+        // if ($HrisMasterlist = Redis::get($key)) {
+        //     return json_decode($HrisMasterlist);
+        // }
         $HrisMasterlist = HrisMasterlist::where('emp_pms_id', $emp_id)->first();
-        Redis::set($key, $HrisMasterlist);
+        // Redis::set($key, $HrisMasterlist);
 
         return $HrisMasterlist;
     }

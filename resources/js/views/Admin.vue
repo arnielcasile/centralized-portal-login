@@ -19,7 +19,7 @@
                     <div class="title__tagline">
                         " Fujitsu grows so do its requirements, as well as the need to efficiently manage and safeguard IT and data assets so we centralized system monitoring. "<br><small>- DaileDreamer</small>
                         <div class="title__controls">
-                            <a class="title__btn p-3" href="/fdtp-portal/public/admin#system_list">GET STARTED</a>
+                            <a class="title__btn p-3" href="/centralized-portal-login/public/admin#system_list">GET STARTED</a>
                         </div>
                     </div> 
                 </div>

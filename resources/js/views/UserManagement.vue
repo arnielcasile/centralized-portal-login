@@ -20,7 +20,7 @@
                     <div class="title__tagline">
                         " Welcome to User Management of the FDTP System Portal. All employees list down here can request access to FDTP Systems through their Section Heads approval and system role allocation"
                         <div class="title__controls">
-                            <a class="title__btn p-3" href="/fdtp-portal/public/user-management#list" >GET STARTED</a>
+                            <a class="title__btn p-3" href="/centralized-portal-login/public/user-management#list" >GET STARTED</a>
                         </div>
                     </div> 
                 </div>

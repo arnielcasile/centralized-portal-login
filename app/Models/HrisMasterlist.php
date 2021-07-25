@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\DB;
 class HrisMasterlist extends Model
 {
     // use HasFactory;
-    protected $connection = 'hris';
+    protected $connection = 'mysql';
     protected $table = 'hrms_emp_masterlist';
     protected $primaryKey = 'emp_pms_id';
 }

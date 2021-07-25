@@ -17,7 +17,7 @@
                     <div class="title__tagline">
                         " Welcome to our new all-in-one business solution portal. Having only one account to access all new incoming systems. "
                         <div class="title__controls">
-                            <a class="title__btn p-3" href="/fdtp-portal/public/home#system_list">GET STARTED</a>
+                            <a class="title__btn p-3" href="/centralized-portal-login/public/home#system_list">GET STARTED</a>
                         </div>
                     </div> 
                 </div>
@@ -41,18 +41,10 @@
                     </div>
 
                     <div class="system_list__content">
-                        <b-row v-if="user_count > 0">
-                            <b-col xl="4" lg="12" v-for="user_data in user_info" :key="user_data.id">
-                                <ACard 
-                                    :system_data="user_data">
-                                </ACard>
+                            <b-col sm="12">
+                                <DashBoard>
+                                </DashBoard>
                             </b-col>
-                        </b-row>
-                        <b-row v-if="user_count == 0">
-                            <b-col lg="12">
-                               <h3>You have no access to any system. Contact your section head to add role in your account in a system.</h3>
-                            </b-col>
-                        </b-row>
                     </div>
                 </div>
             </b-col>
@@ -68,12 +60,12 @@
 </template>
 
 <script>
-import ACard from "../components/ACard.vue";
+import DashBoard from "../components/DashBoard.vue";
 import {mapGetters} from 'vuex';
 export default {
     name: "Home",
     components:{
-        ACard
+        DashBoard
     },
     data(){
         return{

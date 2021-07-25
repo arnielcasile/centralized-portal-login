@@ -1,0 +1,6 @@
+https://apexcharts.com/docs/vue-charts/#
+
+npm install --save apexcharts
+npm install --save vue-apexcharts
+
+https://apexcharts.com/vue-chart-demos/column-charts/stacked-columns-100/#

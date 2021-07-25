@@ -9,6 +9,6 @@ class HrisSections extends Model
 {
     use HasFactory;
 
-    protected $connection = 'hris';
+    protected $connection = 'mysql';
     protected $table = 'pms_employee_section';
 }

@@ -4,7 +4,7 @@
             <h1>FDTP Portal</h1>
             <p>" Welcome to our new all-in-one business solution portal. <br>Having only one account to access all new incoming systems."</p>
                 <router-link :to="{name:'Home', params:{id:'home'}}" class="nav-a">Home</router-link> |
-                <router-link to="/fdtp-portal/public/home#system_list" class="nav-a">Systems</router-link> |
+                <router-link to="/centralized-portal-login/public/home#system_list" class="nav-a">Systems</router-link> |
                 <router-link :to="{name:'Admin'}" class="nav-a">Admin</router-link> |
                 <router-link :to="{name:'UserManagement'}"  class="nav-a">User</router-link> |
                 <a class="nav-a" @click="logout()">Logout</a> 
